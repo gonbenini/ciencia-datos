@@ -5,5 +5,5 @@ ObesityDataSet_raw_and_data_sinthetic.txt
 # Practicos, caches, notebooks vacias o de pruebas y metadata de jupyer
 *.pdf
 __pycache__
-Untitled.ipynb
+Untitled*.ipynb
 .ipynb_checkpoints/
