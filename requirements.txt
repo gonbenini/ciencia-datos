@@ -1,4 +1,9 @@
 # pip install -r requirements.txt
 pandas
 icecream
-# scipy
+scipy
+numpy
+matplotlib
+sweetviz
+
+pandas_profiling
