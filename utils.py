@@ -1,4 +1,11 @@
-def descargar(urls, force=False):
+datasets = [
+    "https://ignaciorlando.github.io/datasets/data-science/ObesityDataSet_raw_and_data_sinthetic.txt",
+    "https://ignaciorlando.github.io/datasets/data-science/ObesityDataSet_raw_and_data_sinthetic.csv",
+    "https://ignaciorlando.github.io/datasets/data-science/netflix_titles.txt",
+    "https://ignaciorlando.github.io/datasets/data-science/netflix_titles.csv"
+]
+
+def descargar(urls=datasets, force=False):
     from urllib import request as req
     import os
 
@@ -17,7 +24,4 @@ def mostrar_archivo(archivo):
         print(descripcion)
 
 # No lo meto en un `if __name__ == "__main__":` a propositoo asi solo con hacer `import utils` ya se descarga
-descargar([
-    "https://ignaciorlando.github.io/datasets/data-science/ObesityDataSet_raw_and_data_sinthetic.txt",
-    "https://ignaciorlando.github.io/datasets/data-science/ObesityDataSet_raw_and_data_sinthetic.csv"
-])
+descargar()
