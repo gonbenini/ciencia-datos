@@ -2,7 +2,11 @@ datasets = [
     "https://ignaciorlando.github.io/datasets/data-science/ObesityDataSet_raw_and_data_sinthetic.txt",
     "https://ignaciorlando.github.io/datasets/data-science/ObesityDataSet_raw_and_data_sinthetic.csv",
     "https://ignaciorlando.github.io/datasets/data-science/netflix_titles.txt",
-    "https://ignaciorlando.github.io/datasets/data-science/netflix_titles.csv"
+    "https://ignaciorlando.github.io/datasets/data-science/netflix_titles.csv",
+
+    # tp 4
+    "https://ignaciorlando.github.io/datasets/data-science/movies.csv",
+    "https://ignaciorlando.github.io/datasets/data-science/food.zip",
 ]
 
 def descargar(urls=datasets, force=False):
