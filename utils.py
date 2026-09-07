@@ -9,6 +9,13 @@ datasets = [
     "https://ignaciorlando.github.io/datasets/data-science/food.zip",
 ]
 
+def extract_if_zip(file_name, file_path):
+    import zipfile
+
+    if file_name.lower().endswith(".zip"):
+        with zipfile.ZipFile(file_path, "r") as zip_ref:
+            zip_ref.extractall(".") 
+
 def descargar(urls=datasets, force=False):
     from urllib import request as req
     import os
@@ -21,6 +28,8 @@ def descargar(urls=datasets, force=False):
             continue
             
         req.urlretrieve(url, file_path)
+
+        extract_if_zip(file_name, file_path)
 
 def mostrar_archivo(archivo):
     with open(archivo, "r", encoding="utf-8") as f:
