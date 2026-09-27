@@ -31,10 +31,18 @@ def descargar(urls=datasets, force=False):
 
         extract_if_zip(file_name, file_path)
 
-def mostrar_archivo(archivo):
+def mostrar_archivo(archivo, lines=None):
     with open(archivo, "r", encoding="utf-8") as f:
-        descripcion = f.read()
-        print(descripcion)
+        if lines:
+            for _i in range(lines):
+                # cuando el archivo sea tan grande que crashearia el navegador de jupyer, en vez de imprimirlo entero muestro solo tanta cantidad de lineas.
+                descripcion = f.readline()
+                if not descripcion:
+                    break
+                print(descripcion, end='')
+        else:
+            descripcion = f.read()
+            print(descripcion)
 
-# No lo meto en un `if __name__ == "__main__":` a propositoo asi solo con hacer `import utils` ya se descarga
+# No lo meto en un `if __name__ == "__main__":` a proposito asi solo con hacer `import utils` ya se descarga
 descargar()
